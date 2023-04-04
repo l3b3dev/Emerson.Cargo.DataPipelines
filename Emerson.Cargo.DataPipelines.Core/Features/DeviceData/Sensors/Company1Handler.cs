@@ -3,6 +3,9 @@ using MediatR;
 
 namespace Emerson.Cargo.DataPipelines.Core.Features.DeviceData.Sensors;
 
+/// <summary>
+/// Mediator Company1 Handler
+/// </summary>
 public class Company1Handler : IRequestHandler<Company1Query, IEnumerable<Domain.Entities.DeviceData>>
 {
     private readonly ICompany1SensorDataParser _sensorParser;

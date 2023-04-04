@@ -4,6 +4,13 @@ using System.Text.Json;
 
 namespace Emerson.Cargo.DataPipelines.Infrastructure.SensorParser;
 
+/// <summary>
+/// To reduce the overhead of object de-serialization, especially when the schemas are not consistent,
+/// we manipulate JSON DOM directly with JsonDocument
+///
+/// Company1SensorDataParser is responsible for parsing the sensor data from Company1
+/// and performing basic data validation and aggregation
+/// </summary>
 public class Company1SensorDataParser : ICompany1SensorDataParser
 {
     public IEnumerable<DeviceData> Parse(string sensorData)
@@ -17,6 +24,7 @@ public class Company1SensorDataParser : ICompany1SensorDataParser
 
 
         //enumerating Trackers from Foo1
+        //parser query for Company1
         var sensorDataQuery = from tracker in root.GetProperty("Trackers").EnumerateArray()
             let deviceId = tracker.GetProperty("Id").GetInt32()
             let deviceName = tracker.GetProperty("Model").GetString()
@@ -29,9 +37,9 @@ public class Company1SensorDataParser : ICompany1SensorDataParser
                         cData.GetProperty("Value").GetDouble()
                     ));
 
-
+        //aggregation query for Company1
         var groupBySensorQuery =
-            from queryData in sensorDataQuery.SelectMany(d => d.SelectMany(sd => sd))
+            from queryData in sensorDataQuery.SelectMany(d => d.SelectMany(sd => sd)) // must flat map with SelectMany
             group queryData by new { queryData.SensorId, queryData.SensorName }
             into sensorGroup
             let tempReadings = sensorGroup.Where(sd => sd.Type == SensorType.Temperature)

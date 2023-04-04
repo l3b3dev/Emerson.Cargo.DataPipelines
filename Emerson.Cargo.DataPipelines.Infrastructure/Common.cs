@@ -4,6 +4,13 @@ namespace Emerson.Cargo.DataPipelines.Infrastructure;
 
 public static class Common
 {
+    /// <summary>
+    /// Helper function for parsing sensor type since schemas are not consistent.
+    /// Can be similarly extended to support other types
+    /// </summary>
+    /// <param name="sensorType"></param>
+    /// <returns></returns>
+    /// <exception cref="ArgumentOutOfRangeException"></exception>
     public static SensorType ParseSensorType(string? sensorType) => sensorType switch
     {
         "TEMP" => SensorType.Temperature,
