@@ -12,6 +12,14 @@
 * First and Last time each device reported sensor values
 ###### Save the merged list to a new JSON file
 
+**Running Instructions**
+###### You can open the solution in Visual Studio 2022. It contains main console project Emerson.Cargo.DataPipelines.Ingest. Main is expecting a path where the output json file will be saved. If no path is provided, it will default to 'output.json' in the current directory. The solution also contains unit tests project Emerson.Cargo.DataPipelines.Tests. You can run the tests from there or from the Test Explorer in Visual Studio. Make sure you have a valid output path, I am using "c:\tmp\output.json" in the below example
+###### Another way to run is with dotnet run. First, at the solution level perform a build
+* dotnet build .\Emerson.Cargo.DataPipelines.sln
+* cd .\Emerson.Cargo.DataPipelines.Ingest\
+* dotnet run "C:\tmp\output.json"
+
+
 **Design**
 ###### We are going to use hexagonal architecture to simulate real world scenarious where we have many sources with different schemas. This design aims at creating loosely coupled application components that can be easily connected to their software environment by means of ports and adapters. This makes components exchangeable at any level and facilitates test automation
 ![Hexagonal Architecture](doc/hex-arc.png)
