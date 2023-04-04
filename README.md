@@ -15,10 +15,11 @@
 **Design**
 ###### We are going to use hexagonal architecture to simulate real world scenarious where we have many sources with different schemas. This design aims at creating loosely coupled application components that can be easily connected to their software environment by means of ports and adapters. This makes components exchangeable at any level and facilitates test automation
 ![Hexagonal Architecture](doc/hex-arc.png)
-###### The Tax Service will also have these methods and simply call the Tax Calculator.  Eventually we would have several Tax Calculators and the Tax Service would need to decide which to use based on the Customer that is consuming the Tax Service. 
+###### We will use the 'clean architecture' flavour of hexagonal architecture. Which for this project will look as below
+![Clean Architecture](doc/clean-arc.png)
 
 # Architectural Diagram
-![Arch](InternationalMarket.Services.Architecture.png)
+![Arch](doc/arc.png)
 
 # Minimal Requirements documentation
 * Decide on internal canonical Tax representation in the system
