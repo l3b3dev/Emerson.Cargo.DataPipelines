@@ -17,6 +17,8 @@
 ![Hexagonal Architecture](doc/hex-arc.png)
 ###### We will use the 'clean architecture' flavour of hexagonal architecture. Which for this project will look as below
 ![Clean Architecture](doc/clean-arc.png)
+###### We will also use Mediator design pattern to fascilliate clean separation of concerns and loose coupling between components. MediatR nugget package implements the pattern and will be used in this project. Loosely speaking, this pattern will allow us to plug in other companies later which have different schemas and the application will continue to map to internal Canonical data model as below
+![Med](doc/mediatr.png)
 
 # Architectural Diagram
 ![Arch](doc/arc.png)
