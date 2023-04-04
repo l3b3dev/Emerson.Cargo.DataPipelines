@@ -24,7 +24,7 @@
 ![Arch](doc/arc.png)
 
 # Minimal Requirements documentation
-* Decide on internal canonical Tax representation in the system
-* Implement central DI strategy
-* Implement central cross cutting concerns
-* Decide on api auth strategy for different integrations
+* Decide on internal canonical representation for sensor data
+* Implement JSON DOM parser for Company1 and Company2
+* Use hexagonal architecture to implement the solution
+* Include unit tests for all components
