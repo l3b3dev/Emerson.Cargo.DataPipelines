@@ -17,7 +17,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emerson.Cargo.DataPipelines
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emerson.Cargo.DataPipelines.Infrastructure", "Emerson.Cargo.DataPipelines.Infrastructure\Emerson.Cargo.DataPipelines.Infrastructure.csproj", "{5C9FE669-B412-4C00-8485-3DAE37B84DFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emerson.Cargo.DataPipelines.Ingest", "Emerson.Cargo.DataPipelines.Ingest\Emerson.Cargo.DataPipelines.Ingest.csproj", "{17B8BBB9-8D52-4232-AA52-68E195953C8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emerson.Cargo.DataPipelines.Ingest", "Emerson.Cargo.DataPipelines.Ingest\Emerson.Cargo.DataPipelines.Ingest.csproj", "{17B8BBB9-8D52-4232-AA52-68E195953C8B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{5B7F63D8-A7B7-42B2-86B9-5E1759A06B7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emerson.Cargo.DataPipelines.Infrastructure.UnitTests", "Emerson.Cargo.DataPipelines.Infrastructure.UnitTests\Emerson.Cargo.DataPipelines.Infrastructure.UnitTests.csproj", "{F0D03761-FB92-4A2A-8B29-13B054032B3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emerson.Cargo.DataPipelines.Core.UnitTests", "Emerson.Cargo.DataPipelines.Core.UnitTests\Emerson.Cargo.DataPipelines.Core.UnitTests.csproj", "{2B970053-E153-43A1-9542-DDE9C48C67A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +47,14 @@ Global
 		{17B8BBB9-8D52-4232-AA52-68E195953C8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17B8BBB9-8D52-4232-AA52-68E195953C8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17B8BBB9-8D52-4232-AA52-68E195953C8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0D03761-FB92-4A2A-8B29-13B054032B3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0D03761-FB92-4A2A-8B29-13B054032B3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0D03761-FB92-4A2A-8B29-13B054032B3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0D03761-FB92-4A2A-8B29-13B054032B3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B970053-E153-43A1-9542-DDE9C48C67A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B970053-E153-43A1-9542-DDE9C48C67A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B970053-E153-43A1-9542-DDE9C48C67A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B970053-E153-43A1-9542-DDE9C48C67A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +67,8 @@ Global
 		{EBC0DED0-C56B-4BD4-A4F5-E0372D2B2C84} = {94CE0268-C3BB-49E2-8D80-38F0D6FDBE44}
 		{5C9FE669-B412-4C00-8485-3DAE37B84DFA} = {F50AFF63-0854-4F33-A79D-9F99C1483DFF}
 		{17B8BBB9-8D52-4232-AA52-68E195953C8B} = {091A9698-E34C-47C7-B459-7A7D2B739722}
+		{F0D03761-FB92-4A2A-8B29-13B054032B3B} = {5B7F63D8-A7B7-42B2-86B9-5E1759A06B7B}
+		{2B970053-E153-43A1-9542-DDE9C48C67A9} = {5B7F63D8-A7B7-42B2-86B9-5E1759A06B7B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3857BB35-E19A-4829-A872-35A2FACDA8B8}
